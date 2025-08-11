@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class RoundedRectLabelComponent extends StatelessWidget {
   const RoundedRectLabelComponent({required this.labelValue, super.key});
-  final int? labelValue;
+  final String labelValue;
 
   @override
   Widget build(final BuildContext context) => Container(
@@ -15,9 +15,6 @@ class RoundedRectLabelComponent extends StatelessWidget {
       borderRadius: AppDimensions.borRadius(2),
       color: AppColors.lightBGGreen,
     ),
-    child: Text(
-      '$labelValue days to go',
-      style: AppText.b3!.cl(AppColors.white).s(10),
-    ),
+    child: Text(labelValue, style: AppText.b3!.cl(AppColors.white).s(10)),
   );
 }

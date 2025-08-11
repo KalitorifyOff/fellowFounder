@@ -16,9 +16,10 @@ class EventItemWidget extends StatelessWidget {
     required this.date,
     required this.time,
     required this.organizerName,
-    required this.isSave,
     super.key,
     this.labelValue,
+    this.isCompleted = false,
+    this.isSave,
   });
   final String imgPath;
   final String eventName;
@@ -27,7 +28,8 @@ class EventItemWidget extends StatelessWidget {
   final String date;
   final String time;
   final String organizerName;
-  final bool isSave;
+  final bool? isSave;
+  final bool isCompleted;
 
   @override
   Widget build(final BuildContext context) => Container(
@@ -78,8 +80,15 @@ class EventItemWidget extends StatelessWidget {
                       ),
 
                       //* label
+                      // todo: whats the logic for changing the bg color
                       if (labelValue != null)
-                        RoundedRectLabelComponent(labelValue: labelValue),
+                        RoundedRectLabelComponent(
+                          labelValue: '$labelValue days to go',
+                        ),
+                      if (isCompleted)
+                        const RoundedRectLabelComponent(
+                          labelValue: 'Completed',
+                        ),
                     ],
                   ),
 
@@ -119,7 +128,7 @@ class EventItemWidget extends StatelessWidget {
             ),
 
             //* label
-            const SaveButtonWidgetComponent(),
+            if (!isCompleted) const SaveButtonWidgetComponent(),
           ],
         ),
       ],

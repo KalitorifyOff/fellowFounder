@@ -1,4 +1,5 @@
 import 'package:ecommerce_app_login/constants/resources.dart';
+import 'package:ecommerce_app_login/ui/events/past_event_screen.dart';
 import 'package:ecommerce_app_login/ui/events/upcoming_event_screen.dart';
 import 'package:ecommerce_app_login/ui/events/widgets/tab_button.dart';
 import 'package:ecommerce_app_login/widgets/appbar_widget.dart';
@@ -46,12 +47,7 @@ class _EventScreenState extends State<EventScreen> {
             child:
                 isUpcomingSelected
                     ? const Center(child: UpcomingEventScreen())
-                    : const Center(
-                      child: Text(
-                        'Past Events Content',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
+                    : const Center(child: PastEventScreen()),
           ),
         ),
       ],

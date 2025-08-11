@@ -2,19 +2,19 @@ class MonthEvents {
   MonthEvents({required this.month, required this.events});
 
   factory MonthEvents.fromJson(final Map<String, dynamic> json) => MonthEvents(
-    month: json['month'],
-    events:
-        (json['events'] as List)
+        month: json['month'],
+        events: (json['events'] as List)
             .map((final event) => EventModel.fromJson(event))
             .toList(),
-  );
+      );
+
   final String month;
   final List<EventModel> events;
 
   Map<String, dynamic> toJson() => {
-    'month': month,
-    'events': events.map((final e) => e.toJson()).toList(),
-  };
+        'month': month,
+        'events': events.map((final e) => e.toJson()).toList(),
+      };
 }
 
 class EventModel {
@@ -24,39 +24,40 @@ class EventModel {
     required this.dateTime,
     required this.organizerName,
     required this.eventImgUrl,
-    required this.isSaved,
+    this.isSaved, // now nullable
     this.daysToGo,
   });
 
   factory EventModel.fromJson(final Map<String, dynamic> json) => EventModel(
-    eventName: json['eventName'],
-    location: json['location'],
-    dateTime: json['dateTime'],
-    organizerName: json['organizerName'],
-    eventImgUrl: json['eventImgUrl'],
-    isSaved: json['isSaved'],
-    daysToGo: json['daysToGo'],
-  );
+        eventName: json['eventName'],
+        location: json['location'],
+        dateTime: json['dateTime'],
+        organizerName: json['organizerName'],
+        eventImgUrl: json['eventImgUrl'],
+        isSaved: json.containsKey('isSaved') ? json['isSaved'] as bool? : null,
+        daysToGo: json['daysToGo'],
+      );
+
   final String eventName;
   final String location;
   final int dateTime; // epoch in ms
   final String organizerName;
   final String eventImgUrl;
-  final bool isSaved;
+  final bool? isSaved; // nullable
   final int? daysToGo;
 
   String get date => _formatDate(dateTime);
   String get time => _formatTime(dateTime);
 
   Map<String, dynamic> toJson() => {
-    'eventName': eventName,
-    'location': location,
-    'dateTime': dateTime,
-    'organizerName': organizerName,
-    'eventImgUrl': eventImgUrl,
-    'isSaved': isSaved,
-    if (daysToGo != null) 'daysToGo': daysToGo,
-  };
+        'eventName': eventName,
+        'location': location,
+        'dateTime': dateTime,
+        'organizerName': organizerName,
+        'eventImgUrl': eventImgUrl,
+        if (isSaved != null) 'isSaved': isSaved, // only include if not null
+        if (daysToGo != null) 'daysToGo': daysToGo,
+      };
 
   static String _formatDate(final int epochMs) {
     final date = DateTime.fromMillisecondsSinceEpoch(epochMs);

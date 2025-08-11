@@ -235,9 +235,9 @@ class S {
 
   static const String createEvents = 'Create Events';
 
-  // static const String a = '';
+  static const String noPastEvents = 'No Past Events Yet';
 
-  // static const String a = '';
+  static const String pastEentEmptyMessage = 'Once your events are over, you’ll see them listed here.';
 
   // static const String a = '';
 

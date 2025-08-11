@@ -5,9 +5,15 @@ import 'package:ecommerce_app_login/ui/events/widgets/event_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MonthViewWidget extends StatelessWidget {
-  const MonthViewWidget({required this.title, required this.events, super.key});
+  const MonthViewWidget({
+    required this.title,
+    required this.events,
+    required this.isCompleted,
+    super.key,
+  });
   final String title;
   final List<EventModel> events;
+  final bool isCompleted;
 
   @override
   Widget build(final BuildContext context) => Padding(
@@ -32,6 +38,7 @@ class MonthViewWidget extends StatelessWidget {
                 isSave: events[index].isSaved,
                 location: events[index].location,
                 labelValue: events[index].daysToGo,
+                isCompleted: isCompleted,
               ),
         ),
       ],

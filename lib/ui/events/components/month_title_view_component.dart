@@ -11,23 +11,26 @@ class MothTitleViewComponent extends StatelessWidget {
   final String title;
 
   @override
-  Widget build(final BuildContext context) => Row(
-    children: [
-      Stack(
-        children: [
-          const AppImage(imageUrl: Assets.titleDecoration),
-          Padding(
-            padding: Space.h!.l(0.5),
-            child: Text(
-              (title == DateFormat('MMMM').format(DateTime.now())
-                  ? S.thisMonth
-                  : title),
-              style: AppText.b2b,
+  Widget build(final BuildContext context) => Padding(
+    padding: Space.all(0.6, 0.5),
+    child: Row(
+      children: [
+        Stack(
+          children: [
+            const AppImage(imageUrl: Assets.titleDecoration),
+            Padding(
+              padding: Space.h!.l(0.5),
+              child: Text(
+                (title == DateFormat('MMMM').format(DateTime.now())
+                    ? S.thisMonth
+                    : title),
+                style: AppText.b2b,
+              ),
             ),
-          ),
-        ],
-      ),
-      const Expanded(child: Divider(color: AppColors.grey100)),
-    ],
+          ],
+        ),
+        const Expanded(child: Divider(color: AppColors.grey100)),
+      ],
+    ),
   );
 }
