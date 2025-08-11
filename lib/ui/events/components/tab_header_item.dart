@@ -37,6 +37,6 @@ class _TabHeaderItem extends StatelessWidget {
     padding: Space.vf(0.75),
     width: AppDimensions.width(50),
     alignment: Alignment.center,
-    child: Text(title, style: AppText.b3b),
+    child: Text(title, style: AppText.b3!.w(6).cl(Colors.black).pop()),
   );
 }
