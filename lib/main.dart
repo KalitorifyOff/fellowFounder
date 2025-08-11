@@ -63,6 +63,8 @@ class _MainAppState extends State<MainApp> {
         future: Future(() async => AuthService().isLoggedIn()),
 
         builder: (final context, final snapshot) {
+          return const EventScreen();
+
           if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasData) {
               if (snapshot.data != null) {
