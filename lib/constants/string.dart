@@ -207,11 +207,33 @@ class S {
   //* [ReferralsScreen]
   static const String linkCopied = 'Link copied to clipboard';
 
-  // static const String a = '';
+  //* []
+  static const String congratulations = 'Congratulations!';
 
-  // static const String a = '';
+  static const String rewardSuccessMessage =
+      'Your Reward has been Successfully Collected';
 
-  // static const String a = '';
+  static const String rewardSuccessWarningMessage =
+      'If you are still facing trouble,\nWait for 3–5 business days';
+
+  //* [EventScreen]
+  static const String myEvents = 'My Events';
+
+  static const String upcomingEvents = 'Upcoming Events';
+
+  static const String pastEvents = 'Past Events';
+
+  static const String youHave = 'You have';
+
+  static const String eventsPlannedIn = 'events planned in';
+
+  static const String thisMonth = 'This month';
+
+  static const String nothingOnYourCalendar = 'Nothing On Your Calendar';
+
+  static const String planYourFirstEvent = 'Plan your first event to stay ahead.';
+
+  static const String createEvents = 'Create Events';
 
   // static const String a = '';
 

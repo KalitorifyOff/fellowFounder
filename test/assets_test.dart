@@ -6,12 +6,19 @@ import 'package:ecommerce_app_login/constants/assets.dart';
 void main() {
   test('assets assets test', () {
     expect(File(Assets.congrats).existsSync(), isTrue);
+    expect(File(Assets.emptyPastEvents).existsSync(), isTrue);
+    expect(File(Assets.emptyUpcomingEvents).existsSync(), isTrue);
     expect(File(Assets.placeholder).existsSync(), isTrue);
     expect(File(Assets.referral1).existsSync(), isTrue);
     expect(File(Assets.referral2).existsSync(), isTrue);
+    expect(File(Assets.titleDecoration).existsSync(), isTrue);
     expect(File(Assets.titleUnderline).existsSync(), isTrue);
     expect(File(Assets.arrowRight).existsSync(), isTrue);
+    expect(File(Assets.bookmarkCheck).existsSync(), isTrue);
+    expect(File(Assets.calendarPlus1).existsSync(), isTrue);
+    expect(File(Assets.calendar).existsSync(), isTrue);
     expect(File(Assets.calls).existsSync(), isTrue);
+    expect(File(Assets.clock).existsSync(), isTrue);
     expect(File(Assets.defaultUserProfile).existsSync(), isTrue);
     expect(File(Assets.download).existsSync(), isTrue);
     expect(File(Assets.editAvatar).existsSync(), isTrue);
@@ -23,6 +30,7 @@ void main() {
     expect(File(Assets.instagram).existsSync(), isTrue);
     expect(File(Assets.linkedin).existsSync(), isTrue);
     expect(File(Assets.mail).existsSync(), isTrue);
+    expect(File(Assets.mapPin).existsSync(), isTrue);
     expect(File(Assets.messageIcon).existsSync(), isTrue);
     expect(File(Assets.passwordLock).existsSync(), isTrue);
     expect(File(Assets.profileIcon).existsSync(), isTrue);

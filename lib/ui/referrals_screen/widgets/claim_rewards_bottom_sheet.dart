@@ -1,7 +1,6 @@
 import 'package:ecommerce_app_login/configs/app_dimensions.dart';
 import 'package:ecommerce_app_login/configs/app_typography.dart';
 import 'package:ecommerce_app_login/configs/space.dart';
-import 'package:ecommerce_app_login/configs/space_ext.dart';
 import 'package:ecommerce_app_login/constants/resources.dart';
 import 'package:ecommerce_app_login/ui/referrals_screen/widgets/claimed_popup_widget.dart';
 import 'package:ecommerce_app_login/widgets/buttons/primary_button.dart';
@@ -10,17 +9,17 @@ import 'package:flutter/material.dart';
 class ClaimRewardBottomSheet extends StatelessWidget {
   const ClaimRewardBottomSheet({required this.claimCallBack, super.key});
   final VoidCallback claimCallBack;
+  //todo: component and widget
 
   @override
   Widget build(final BuildContext context) {
     const padding = AppDimensions.width;
     const height = AppDimensions.height;
-    const font = AppDimensions.font;
     const priceAmount = 449;
 
     return SingleChildScrollView(
       child: Container(
-        padding: Space.z!.t(1.5).b(1.5).r(2).l(2),
+        padding: Space.all(2, 1.5),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
@@ -28,6 +27,7 @@ class ClaimRewardBottomSheet extends StatelessWidget {
             colors: [Color(0xFFE6FEE8), Color(0xFFD3F5D9)],
             stops: [0.01, 1.0],
           ),
+          //todo: normalz
           borderRadius: BorderRadius.vertical(top: Radius.circular(padding(6))),
         ),
         child: Column(
@@ -92,7 +92,7 @@ class ClaimRewardBottomSheet extends StatelessWidget {
                     children: [
                       Text(
                         '${S.rupeeSymbol} $priceAmount',
-                        style: AppText.h2!.w(7).cl(AppColors.white).s(font(18)),
+                        style: AppText.h2b!.cl(AppColors.white),
                       ),
                       Transform.rotate(
                         angle: -0.5,

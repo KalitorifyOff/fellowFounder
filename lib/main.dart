@@ -5,6 +5,7 @@ import 'package:ecommerce_app_login/domain/cubit/theme/theme_cubit.dart';
 import 'package:ecommerce_app_login/services/auth_services.dart';
 import 'package:ecommerce_app_login/ui/dashboard_screen/dashboard_screen.dart';
 import 'package:ecommerce_app_login/ui/edit_profile/cubit/update_cubit.dart';
+import 'package:ecommerce_app_login/ui/events/event_screen.dart';
 import 'package:ecommerce_app_login/ui/home_screen/home_screen.dart';
 import 'package:ecommerce_app_login/ui/login/login_screen.dart';
 import 'package:ecommerce_app_login/ui/referrals_screen/referrals_screen.dart';
@@ -70,12 +71,11 @@ class _MainAppState extends State<MainApp> {
 
                   return const HomeScreen();
                 } else {
-                  //todo: for testing purpose. need to revort once dashboard screen designed.
-                  //* working code
-                  // return const LoginScreen();
-                  //* new code
-                  // return const DashboardScreen();
+                  return const EventScreen();
+                  // ignore: dead_code
                   return const ReferralsScreen();
+                  return const DashboardScreen();
+                  return const LoginScreen();
                 }
               }
             }

@@ -51,11 +51,11 @@ class AppColors {
 
   static const Color orangeForCross = Color(0xffeb6601);
 
-  // static const Color a = Color(0xff);
+  static const Color lightBGGreen = Color(0xff68BAA5);
 
-  // static const Color a = Color(0xff);
+  static const Color lightBGYellow = Color(0xffDFB663);
 
-  // static const Color a = Color(0xff);
+  static const Color lightBGOrange = Color(0xffDE8D41);
 
   // static const Color a = Color(0xff);
 

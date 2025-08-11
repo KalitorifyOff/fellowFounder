@@ -1,56 +1,51 @@
-import 'package:ecommerce_app_login/constants/assets.dart';
+import 'package:ecommerce_app_login/configs/app_dimensions.dart';
+import 'package:ecommerce_app_login/configs/app_typography.dart';
+import 'package:ecommerce_app_login/configs/space.dart';
+import 'package:ecommerce_app_login/configs/space_ext.dart';
+import 'package:ecommerce_app_login/constants/resources.dart';
 import 'package:ecommerce_app_login/widgets/appimage.dart';
 import 'package:flutter/material.dart';
 
 Future<void> showRewardCollectedPopup(final BuildContext context) async {
+  //todo: use class -
   await showDialog(
     context: context,
     builder:
         (final context) => Dialog(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: AppDimensions.borRadius(10),
           ),
-          insetPadding: const EdgeInsets.symmetric(horizontal: 24),
+          insetPadding: Space.hf(0.6),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: Space.all(1.5),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 //* Title
-                const Text(
-                  'Congratulations!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
+                Padding(
+                  padding: Space.z!.b(2),
+                  child: Text(S.congratulations, style: AppText.b1b),
                 ),
-
-                const SizedBox(height: 8),
 
                 //* Subtitle
-                const Text(
-                  'Your Reward has been Successfully Collected',
+                Text(
+                  S.rewardSuccessMessage,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                  style: AppText.b2,
                 ),
-
-                const SizedBox(height: 16),
 
                 //* Illustration
-                const AppImage(
+                AppImage(
                   imageUrl: Assets.congrats,
-                  height: 260,
-                  width: 230,
+                  height: AppDimensions.normalize(100),
+                  width: AppDimensions.normalize(80),
                 ),
-
-                const SizedBox(height: 16),
 
                 //* Footer note
                 Text(
-                  'If you are still facing trouble,\nWait for 3–5 business days',
+                  S.rewardSuccessWarningMessage,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                  style: AppText.b3!.cl(AppColors.grey500),
                 ),
               ],
             ),
