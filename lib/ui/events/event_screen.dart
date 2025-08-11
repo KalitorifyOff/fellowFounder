@@ -15,42 +15,43 @@ class EventScreen extends StatefulWidget {
 class _EventScreenState extends State<EventScreen> {
   bool isUpcomingSelected = true;
 
-  @override
-  Widget build(final BuildContext context) => Scaffold(
-    backgroundColor: AppColors.white,
-    appBar: const AppBarWidget(showBackButton: true, title: S.myEvents),
-    body: Column(
-      children: [
-        //* Switch
-        Row(
-          children: [
-            TabButtonWidget(
-              onPress: () {
-                setState(() => isUpcomingSelected = !isUpcomingSelected);
-              },
-              title: S.upcomingEvents,
-              isSelected: isUpcomingSelected,
-            ),
-            TabButtonWidget(
-              onPress: () {
-                setState(() => isUpcomingSelected = !isUpcomingSelected);
-              },
-              title: S.pastEvents,
-              isSelected: !isUpcomingSelected,
-            ),
-          ],
-        ),
+  void _selectTab(final bool selectUpcoming) {
+    if (isUpcomingSelected != selectUpcoming) {
+      setState(() => isUpcomingSelected = selectUpcoming);
+    }
+  }
 
-        //* Body
-        Expanded(
-          child: SingleChildScrollView(
-            child:
-                isUpcomingSelected
-                    ? const Center(child: UpcomingEventScreen())
-                    : const Center(child: PastEventScreen()),
-          ),
-        ),
-      ],
-    ),
+  Widget _buildTabButtons() => Row(
+    children: [
+      TabButtonWidget(
+        onPress: () => _selectTab(true),
+        title: S.upcomingEvents,
+        isSelected: isUpcomingSelected,
+      ),
+      TabButtonWidget(
+        onPress: () => _selectTab(false),
+        title: S.pastEvents,
+        isSelected: !isUpcomingSelected,
+      ),
+    ],
   );
+
+  @override
+  Widget build(final BuildContext context) {
+    final Widget bodyContent =
+        isUpcomingSelected
+            ? const UpcomingEventScreen()
+            : const PastEventScreen();
+
+    return Scaffold(
+      backgroundColor: AppColors.white,
+      appBar: const AppBarWidget(showBackButton: true, title: S.myEvents),
+      body: Column(
+        children: [
+          _buildTabButtons(),
+          Expanded(child: SingleChildScrollView(child: bodyContent)),
+        ],
+      ),
+    );
+  }
 }
