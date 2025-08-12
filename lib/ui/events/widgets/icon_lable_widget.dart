@@ -14,7 +14,7 @@ class IconLableWidget extends StatelessWidget {
   @override
   Widget build(final BuildContext context) => Row(
     mainAxisSize: MainAxisSize.min,
-    spacing: AppDimensions.width(1),
+    spacing: AppDimensions.space(),
     children: [
       AppImage(imageUrl: iconpath, size: AppDimensions.font(8)),
       Flexible(

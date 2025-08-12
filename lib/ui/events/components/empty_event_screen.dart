@@ -1,7 +1,7 @@
 part of '../event_screen.dart';
 
-class _EmptyEventScreen extends StatelessWidget {
-  const _EmptyEventScreen();
+class _EmptyUpcomingEventScreen extends StatelessWidget {
+  const _EmptyUpcomingEventScreen();
 
   @override
   Widget build(final BuildContext context) => Expanded(

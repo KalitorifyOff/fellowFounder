@@ -36,17 +36,17 @@ class EventItemWidget extends StatelessWidget {
   Widget build(final BuildContext context) => Grayscale(
     isActive: isCompleted,
     child: Container(
-      margin: Space.all(),
+      margin: Space.all(0.25),
       padding: Space.all(0.6),
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: Colors.white,
         border: Border.all(color: const Color(0xFFC2C6C6)),
         borderRadius: AppDimensions.borRadius(3),
         boxShadow: const [
           BoxShadow(
-            color: Color.fromARGB(99, 138, 146, 151),
+            color: Color(0xFFC2C6C6),
             blurRadius: 3,
-            offset: Offset(3.33, 3.33),
+            blurStyle: BlurStyle.inner,
           ),
         ],
       ),
@@ -85,8 +85,6 @@ class EventItemWidget extends StatelessWidget {
                           ),
                         ),
 
-                        //* label
-                        // todo: whats the logic for changing the bg color
                         if (labelValue != null)
                           RoundedRectLabelComponent(
                             labelValue: '$labelValue days to go',

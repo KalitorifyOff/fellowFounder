@@ -1,9 +1,14 @@
+import 'dart:convert';
+
 import 'package:ecommerce_app_login/configs/app_dimensions.dart';
 import 'package:ecommerce_app_login/configs/app_typography.dart';
 import 'package:ecommerce_app_login/configs/space.dart';
 import 'package:ecommerce_app_login/configs/space_ext.dart';
 import 'package:ecommerce_app_login/constants/resources.dart';
+import 'package:ecommerce_app_login/ui/events/model/event_model.dart';
 import 'package:ecommerce_app_login/ui/events/past_event_screen.dart';
+import 'package:ecommerce_app_login/ui/events/utils/upcoming_event_mocked_data.dart';
+import 'package:ecommerce_app_login/ui/events/widgets/month_view_widget.dart';
 import 'package:ecommerce_app_login/widgets/appbar_widget.dart';
 import 'package:ecommerce_app_login/widgets/appimage.dart';
 import 'package:ecommerce_app_login/widgets/buttons/gradient_button.dart';
@@ -47,22 +52,45 @@ class _EventScreenState extends State<EventScreen> {
           ],
         ),
 
-        if (true)
-          const _EmptyEventScreen()
-        else
-          Expanded(
-            child: SingleChildScrollView(
-              child:
-                  tabSelected == tabs.first
-                      ? const Column(
-                        children: [
-                          _UpcomingEventCounter(eventCount: 3, month: 'July'),
-                        ],
-                      )
-                      : const PastEventScreen(),
-            ),
+        Expanded(
+          child: SingleChildScrollView(
+            child:
+                tabSelected == tabs.first
+                    ? const _UpcomingEventsTab()
+                    : const PastEventScreen(),
           ),
+        ),
       ],
     ),
+  );
+}
+
+class _UpcomingEventsTab extends StatelessWidget {
+  const _UpcomingEventsTab();
+  List<MonthEvents> _parseMonthsList() {
+    final jsonData = jsonDecode(eventsJson) as List;
+    return jsonData
+        .map((final e) => MonthEvents.fromJson(e as Map<String, dynamic>))
+        .toList();
+  }
+
+  @override
+  Widget build(final BuildContext context) {
+    final monthsList = _parseMonthsList();
+
+    return _buildEventList(monthsList);
+  }
+
+  //* When events are available
+  Widget _buildEventList(final List<MonthEvents> months) => Column(
+    children: [
+      ...months.map(
+        (final month) => MonthViewWidget(
+          title: month.month,
+          events: month.events,
+          isCompleted: false,
+        ),
+      ),
+    ],
   );
 }

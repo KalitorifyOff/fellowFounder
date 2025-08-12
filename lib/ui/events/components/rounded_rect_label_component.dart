@@ -15,6 +15,6 @@ class RoundedRectLabelComponent extends StatelessWidget {
       borderRadius: AppDimensions.borRadius(2),
       color: AppColors.lightBGGreen,
     ),
-    child: Text(labelValue, style: AppText.b3!.cl(AppColors.white).s(10)),
+    child: Text(labelValue, style: AppText.l1!.cl(AppColors.white).w(5)),
   );
 }
