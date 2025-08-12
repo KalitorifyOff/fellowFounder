@@ -70,7 +70,7 @@ class _MainAppState extends State<MainApp> {
           return Scaffold(
             backgroundColor: AppColors.white,
             appBar: const AppBarWidget(showBackButton: true, title: S.myEvents),
-            body: Expanded(child: EmptyScreen.contacts()),
+            body: Expanded(child: EmptyScreen.pastEvent()),
           );
 
           // ignore: dead_code

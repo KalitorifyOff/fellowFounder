@@ -34,10 +34,13 @@ class EmptyScreenBodyWidget extends StatelessWidget {
 
       Padding(padding: Space.v!.t(1), child: Text(title, style: AppText.b1b)),
 
-      Text(
-        description,
-        style: AppText.b2!.cl(AppColors.grey500),
-        textAlign: TextAlign.center,
+      Padding(
+        padding: Space.h!,
+        child: Text(
+          description,
+          style: AppText.b2!.cl(AppColors.grey500),
+          textAlign: TextAlign.center,
+        ),
       ),
       if (isShowButton) Space.y2!,
 
