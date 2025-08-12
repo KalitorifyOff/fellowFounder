@@ -57,7 +57,7 @@ class PastEventScreen extends StatelessWidget {
         imageUrl: Assets.emptyUpcomingEvents,
         size: AppDimensions.font(100),
       ),
-      Text(S.noPastEvents, style: AppText.b1b),
+      Text(S.noPastEvents, style: AppText.h1b),
       Text(
         S.pastEentEmptyMessage,
         style: AppText.b2!.cl(AppColors.grey500),

@@ -249,6 +249,91 @@ class S {
 
   static const String join = 'Join';
 
+  static const String noNetworkRequest = 'No Network Requests Yet.';
+
+  static const String noNetworkRequestDesp =
+      'No network requests right now. Stay tuned for updates.';
+
+  static const String viewConnections = 'View Connections';
+
+  static const String noContactsYet = 'No Contacts Yet';
+
+  static const String createContacts = 'Create Contacts';
+
+  static const String noContactsYetDesp =
+      'Start adding contacts and grow your circle.';
+
+  static const String noCategories = 'No Categories Found';
+
+  static const String noCategoriesDesp =
+      'Organize your content by adding a category.';
+
+  static const String addCategory = 'Add Category';
+
+  static const String allSet = 'You’re All Set';
+
+  static const String allSetDesp =
+      'No appointments right now. Schedule one to stay on track.';
+
+  static const String scheduleAppointment = 'Schedule Appointment';
+
+  static const String noLeadsYet = 'No Leads Yet';
+
+  static const String noLeadsYetDesp =
+      'Add leads to start tracking potential opportunities here.';
+
+  static const String addLeads = 'Add Leads';
+
+  static const String emptyNetwork = 'Your Network Is Empty';
+
+  static const String emptyNetworkDesp =
+      'Connect with people and watch your network grow.';
+
+  static const String addNetwork = 'Add Network';
+
+  static const String noPayments = 'No Payments Yet';
+
+  static const String noPaymentsDesp =
+      ' You haven’t made any payments. Once you do, they’ll appear here instantly.';
+
+  static const String joinMembership = 'Join Membership';
+
+  static const String noResultsFound = 'No Results Found';
+
+  static const String noResultsFoundDesp = 'Try a different search.';
+
+  static const String youAreOffline = 'You’re Offline';
+
+  static const String youAreOfflineDesp = 'Reconnect to keep things moving.';
+
+  static const String retry = 'Retry';
+
+  static const String successMail = 'Mail sent successfully!';
+
+  static const String successMailDesp =
+      'Sit back and relax. Your mail was sent without any issues.';
+
+  static const String ok = 'Ok';
+
+  static const String failMail = 'Mail failed to send';
+
+  static const String failMailDesp =
+      'Your message wasn’t sent. Review and retry.';
+
+  static const String tryAgain = 'Try Again...';
+
+  // static const String a = '';
+
+  // static const String a = '';
+
+  // static const String a = '';
+
+  // static const String a = '';
+
+  // static const String a = '';
+
+  // static const String a = '';
+
   // static const String a = '';
 
   // static const String a = '';

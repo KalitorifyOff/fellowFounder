@@ -2,13 +2,28 @@ class Assets {
   Assets._();
 
   static const String congrats = 'assets/congrats.svg';
+  static const String emptyAppointments = 'assets/empty_appointments.svg';
+  static const String emptyCategories = 'assets/empty_categories.svg';
+  static const String emptyContact = 'assets/empty_contact.svg';
+  static const String emptyEvent = 'assets/empty_event.svg';
+  static const String emptyMyLeads = 'assets/empty_my_leads.svg';
+  static const String emptyMyNetwork = 'assets/empty_my_network.svg';
+  static const String emptyMyPayment = 'assets/empty_my_payment.svg';
+  static const String emptyNetworkRequest = 'assets/empty_network_request.svg';
   static const String emptyPastEvents = 'assets/empty_past_events.svg';
   static const String emptyUpcomingEvents = 'assets/empty_upcoming_events.svg';
+  static const String mailFailed = 'assets/mail_failed.svg';
+  static const String mainSuccess = 'assets/main_success.svg';
+  static const String noResultsFound = 'assets/no_results_found.svg';
+  static const String offline = 'assets/offline.svg';
   static const String placeholder = 'assets/placeholder.jpg';
   static const String referral1 = 'assets/referral_1.png';
   static const String referral2 = 'assets/referral_2.png';
   static const String titleDecoration = 'assets/title_decoration.svg';
   static const String titleUnderline = 'assets/title_underline.png';
+  static const String addCategory = 'assets/icons/add_category.svg';
+  static const String addLead = 'assets/icons/add_lead.svg';
+  static const String addNetwork = 'assets/icons/add_network.svg';
   static const String arrowRight = 'assets/icons/arrow_right.svg';
   static const String back = 'assets/icons/back.svg';
   static const String bookmarkCheck = 'assets/icons/bookmark-check.svg';
@@ -17,6 +32,7 @@ class Assets {
   static const String calendar = 'assets/icons/calendar.svg';
   static const String calls = 'assets/icons/calls.png';
   static const String clock = 'assets/icons/clock.svg';
+  static const String createContact = 'assets/icons/create_contact.svg';
   static const String defaultUserProfile =
       'assets/icons/default_user_profile.png';
   static const String download = 'assets/icons/download.png';
@@ -30,10 +46,14 @@ class Assets {
   static const String linkedin = 'assets/icons/linkedin.png';
   static const String mail = 'assets/icons/mail.svg';
   static const String mapPin = 'assets/icons/map-pin.svg';
+  static const String membership = 'assets/icons/membership.svg';
   static const String messageIcon = 'assets/icons/message_icon.svg';
   static const String passwordLock = 'assets/icons/password_lock.svg';
+  static const String peopleRoof = 'assets/icons/people_roof.svg';
   static const String profileIcon = 'assets/icons/profile_icon.svg';
   static const String share = 'assets/icons/share.svg';
+  static const String sheduleAppointment =
+      'assets/icons/shedule_appointment.svg';
   static const String users = 'assets/icons/users.png';
   static const String web = 'assets/icons/web.png';
   static const String whatsapp = 'assets/icons/whatsapp.png';

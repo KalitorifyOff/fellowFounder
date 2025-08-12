@@ -1,16 +1,19 @@
 import 'package:ecommerce_app_login/configs/app.dart';
 import 'package:ecommerce_app_login/configs/apptheme.dart';
+import 'package:ecommerce_app_login/constants/resources.dart';
 import 'package:ecommerce_app_login/domain/bloc/profile/profile_bloc.dart';
 import 'package:ecommerce_app_login/domain/cubit/theme/theme_cubit.dart';
 import 'package:ecommerce_app_login/services/auth_services.dart';
 import 'package:ecommerce_app_login/ui/dashboard_screen/dashboard_screen.dart';
 import 'package:ecommerce_app_login/ui/discover_events/discover_events_screen.dart';
 import 'package:ecommerce_app_login/ui/edit_profile/cubit/update_cubit.dart';
+import 'package:ecommerce_app_login/ui/empty/empty_screen.dart';
 import 'package:ecommerce_app_login/ui/events/event_screen.dart';
 import 'package:ecommerce_app_login/ui/home_screen/home_screen.dart';
 import 'package:ecommerce_app_login/ui/login/login_screen.dart';
 import 'package:ecommerce_app_login/ui/referrals_screen/referrals_screen.dart';
 import 'package:ecommerce_app_login/ui/signup/cubit/register_cubit.dart';
+import 'package:ecommerce_app_login/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -64,6 +67,13 @@ class _MainAppState extends State<MainApp> {
         future: Future(() async => AuthService().isLoggedIn()),
 
         builder: (final context, final snapshot) {
+          return Scaffold(
+            backgroundColor: AppColors.white,
+            appBar: const AppBarWidget(showBackButton: true, title: S.myEvents),
+            body: Expanded(child: EmptyScreen.contacts()),
+          );
+
+          // ignore: dead_code
           return const EventScreen();
 
           if (snapshot.connectionState == ConnectionState.done) {
