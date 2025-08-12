@@ -1,14 +1,7 @@
-import 'package:ecommerce_app_login/configs/app_typography.dart';
-import 'package:ecommerce_app_login/configs/space.dart';
-import 'package:ecommerce_app_login/constants/resources.dart';
-import 'package:flutter/material.dart';
+part of '../event_screen.dart';
 
-class NotificationComponent extends StatelessWidget {
-  const NotificationComponent({
-    required this.eventCount,
-    required this.month,
-    super.key,
-  });
+class _UpcomingEventCounter extends StatelessWidget {
+  const _UpcomingEventCounter({required this.eventCount, required this.month});
   final int eventCount;
   final String month;
 
