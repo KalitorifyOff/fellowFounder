@@ -231,21 +231,23 @@ class S {
 
   static const String nothingOnYourCalendar = 'Nothing On Your Calendar';
 
-  static const String planYourFirstEvent = 'Plan your first event to stay ahead.';
+  static const String planYourFirstEvent =
+      'Plan your first event to stay ahead.';
 
   static const String createEvents = 'Create Events';
 
   static const String noPastEvents = 'No Past Events Yet';
 
-  static const String pastEentEmptyMessage = 'Once your events are over, you’ll see them listed here.';
+  static const String pastEentEmptyMessage =
+      'Once your events are over, you’ll see them listed here.';
 
-  // static const String a = '';
+  static const String viewEvents = 'View Events';
 
-  // static const String a = '';
+  static const String eventDetails = 'Event Details';
 
-  // static const String a = '';
+  static const String organizedBy = 'Organized By ';
 
-  // static const String a = '';
+  static const String join = 'Join';
 
   // static const String a = '';
 

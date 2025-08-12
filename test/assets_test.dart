@@ -14,7 +14,9 @@ void main() {
     expect(File(Assets.titleDecoration).existsSync(), isTrue);
     expect(File(Assets.titleUnderline).existsSync(), isTrue);
     expect(File(Assets.arrowRight).existsSync(), isTrue);
+    expect(File(Assets.back).existsSync(), isTrue);
     expect(File(Assets.bookmarkCheck).existsSync(), isTrue);
+    expect(File(Assets.bookmark).existsSync(), isTrue);
     expect(File(Assets.calendarPlus1).existsSync(), isTrue);
     expect(File(Assets.calendar).existsSync(), isTrue);
     expect(File(Assets.calls).existsSync(), isTrue);
@@ -34,6 +36,7 @@ void main() {
     expect(File(Assets.messageIcon).existsSync(), isTrue);
     expect(File(Assets.passwordLock).existsSync(), isTrue);
     expect(File(Assets.profileIcon).existsSync(), isTrue);
+    expect(File(Assets.share).existsSync(), isTrue);
     expect(File(Assets.users).existsSync(), isTrue);
     expect(File(Assets.web).existsSync(), isTrue);
     expect(File(Assets.whatsapp).existsSync(), isTrue);

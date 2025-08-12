@@ -4,6 +4,7 @@ import 'package:ecommerce_app_login/domain/bloc/profile/profile_bloc.dart';
 import 'package:ecommerce_app_login/domain/cubit/theme/theme_cubit.dart';
 import 'package:ecommerce_app_login/services/auth_services.dart';
 import 'package:ecommerce_app_login/ui/dashboard_screen/dashboard_screen.dart';
+import 'package:ecommerce_app_login/ui/discover_events/discover_events_screen.dart';
 import 'package:ecommerce_app_login/ui/edit_profile/cubit/update_cubit.dart';
 import 'package:ecommerce_app_login/ui/events/event_screen.dart';
 import 'package:ecommerce_app_login/ui/home_screen/home_screen.dart';
@@ -71,8 +72,9 @@ class _MainAppState extends State<MainApp> {
 
                   return const HomeScreen();
                 } else {
-                  return const EventScreen();
+                  return const DiscoverEventsScreen();
                   // ignore: dead_code
+                  return const EventScreen();
                   return const ReferralsScreen();
                   return const DashboardScreen();
                   return const LoginScreen();

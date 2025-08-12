@@ -10,7 +10,9 @@ class Assets {
   static const String titleDecoration = 'assets/title_decoration.svg';
   static const String titleUnderline = 'assets/title_underline.png';
   static const String arrowRight = 'assets/icons/arrow_right.svg';
+  static const String back = 'assets/icons/back.svg';
   static const String bookmarkCheck = 'assets/icons/bookmark-check.svg';
+  static const String bookmark = 'assets/icons/bookmark.svg';
   static const String calendarPlus1 = 'assets/icons/calendar-plus 1.svg';
   static const String calendar = 'assets/icons/calendar.svg';
   static const String calls = 'assets/icons/calls.png';
@@ -31,6 +33,7 @@ class Assets {
   static const String messageIcon = 'assets/icons/message_icon.svg';
   static const String passwordLock = 'assets/icons/password_lock.svg';
   static const String profileIcon = 'assets/icons/profile_icon.svg';
+  static const String share = 'assets/icons/share.svg';
   static const String users = 'assets/icons/users.png';
   static const String web = 'assets/icons/web.png';
   static const String whatsapp = 'assets/icons/whatsapp.png';
